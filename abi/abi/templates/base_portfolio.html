@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}{% blocktrans  %} Portfolio {% endblocktrans%}   {% endblock %}
+{% block header %} 
+<!-- header -->
+        <div class="l-hdr">
+
+            <!-- path -->
+            <div class="b-path g-lnk-inv-case"><ul>
+
+                <li><span><a href="{% url 'index_main' %}">{% trans 'Main' %}</a></span></li>
+                {% block path %}{% endblock %}
+
+            </ul></div>
+            <!-- /path -->
+
+            <!-- logotype and language case -->
+            <div class="logo-case">
+
+                <div class="logo"><a class="png" href="{% url 'index_main' %}" title="abinito"></a></div>
+
+                <ul class="lang">
+                        <li><a href="{{ lang.0 }}">{{ lang.1 }}</a></li>
+                </ul>
+
+            </div>
+            <!-- /logotype and language case -->
+
+        </div>
+        <!-- /header -->
+{% endblock %}
+{% block content %}
+<!-- content area -->
+        <div class="l-cnt">
+
+            <!-- main area -->
+            <div class="l-main"><div class="main-data">
+                <!-- gallery holder -->
+                <div class="b-gallcase first">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h1> {% trans "Last projects" %}<h1></div></div>
+                    <!-- /headline -->
+
+                    <!-- gallery -->
+                    <div class="b-gall"><ul class="g-ovr">
+
+                    {% for lastpost in lastposts%}
+                        <li>
+                            <a href="{% url "portf_one_item" lastpost.url %}">
+                                <img src="{{ lastpost.main_image.image_small.url }}" alt="" />
+
+                                <span class="b-glass"><span class="glass-data">
+                                	<span class="txt"><span class="desc">{{ lastpost.title }}</span></span>
+                                    <span class="glass"></span>
+                                </span></span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul></div>
+                    <!-- /gallery -->
+
+                </div>
+                <!-- /gallery holder -->
+{% block main %}{% endblock %}
+
+</div></div>
+            <!-- /main area -->
+<!-- sidebar -->
+            <div class="l-sb"><div class="sb-data">
+
+                <!-- main menu -->
+                <div class="b-menu g-lnk-inv-case"><ul>
+			{% for mmi in mainmenu %}
+			{% ifequal mmi.url backgr.url %}
+				<li><span>{{ mmi.text }}</span></li>
+			{% else %}
+				<li><a href="/{{ lang.2 }}/{{ mmi.url }}">{{ mmi.text }}</a></li>
+			{% endifequal %}
+			{% endfor %}
+                </ul></div>
+                <!-- /main menu -->
+
+                <!-- events list -->
+                <div class="b-events sb-item">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h2> {% trans "Events" %}</h2></div></div>
+
+                    <!-- list -->
+                    <ul>
+                        {% for rec in lasts %}
+                        	<li><a href="{% url 'event_anon' rec.id %}"><p>{{ rec.title_side }}</p></a></li>
+                        {% endfor %}
+                    </ul>
+                    <!-- /list -->
+
+                </div>
+                <!-- events list -->
+
+                                <!-- our clients -->
+                <div class="b-clients sb-item">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h2>{% trans "Our clients" %}</h2></div></div>
+
+                    <!-- list -->
+                    <ul>
+                        <li><img src="/media/pic/clients-louvre.jpg" alt="" /></li>
+                        <li><img src="/media/pic/clients-juvene.jpg" alt="" /></li>
+                        <li><img src="/media/pic/clients-auroflot.jpg" alt="" /></li>
+                        <li><img src="/media/pic/clients-kid-world.jpg" alt="" /></li>
+
+                        <li><img src="/media/pic/clients-epson.jpg" alt="" /></li>
+                        <li><img src="/media/pic/clients-gazfond.jpg" alt="" /></li>
+                        <li><img src="/media/pic/clients-hikoniks.jpg" alt="" /></li>
+                        <li><img src="/media/pic/clients-ketroy.jpg" alt="" /></li>
+
+                        <li><img src="/media/pic/clients-kira-plastinina.jpg" alt="" /></li>
+                    </ul>
+                        <!-- /list -->
+
+                </div>
+                <!-- /our clients -->
+
+            </div></div>
+            <!-- /sidebar -->
+
+            <div class="g-clear"></div>
+
+
+
+</div>
+        <!-- /content area -->
+{% endblock %}

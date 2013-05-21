@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {{ page.title }} {% endblock %}
+{% block header %} 
+<!-- header -->
+        <div class="l-hdr">
+
+            <!-- path -->
+            <div class="b-path g-lnk-inv-case"><ul>
+
+                <li><span><a href="/{{ lang.2 }}/index/">Главная</a></span></li>
+                {% block path %}{% endblock %}
+
+            </ul></div>
+            <!-- /path -->
+
+            <!-- logotype and language case -->
+            <div class="logo-case">
+
+                <div class="logo"><a class="png" href="/{{ lang.2 }}/index/" title="abinito"></a></div>
+
+                <ul class="lang">
+                        <li><a href="{{ lang.0 }}">{{ lang.1 }}</a></li>
+                </ul>
+
+            </div>
+            <!-- /logotype and language case -->
+
+        </div>
+        <!-- /header -->
+{% endblock %}
+{% block content %}
+<!-- content area -->
+        <div class="l-cnt">
+
+            <!-- main area -->
+            <div class="l-main"><div class="main-data">
+{{ page.body|safe }}
+
+
+</div></div>
+            <!-- /main area -->
+<!-- sidebar -->
+            <div class="l-sb"><div class="sb-data">
+
+                <!-- main menu -->
+                <div class="b-menu g-lnk-inv-case"><ul>
+			{% for mmi in mainmenu %}
+			{% ifequal mmi.url backgr.url %}
+				<li><span>{{ mmi.text }}</span></li>
+			{% else %}
+				<li><a href="/{{ lang.2 }}/{{ mmi.url }}">{{ mmi.text }}</a></li>
+			{% endifequal %}
+			{% endfor %}
+                </ul></div>
+                <!-- /main menu -->
+
+                <!-- events list -->
+                <div class="b-events sb-item">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h2>События</h2></div></div>
+
+                    <!-- list -->
+                    <ul>
+
+			{% for rec in lasts %}
+                                <li><a href="{% url 'event_anon' rec.id %}"><p>{{ rec.title_side }}</p></a></li>
+                        {% endfor %}
+                    </ul>
+                    <!-- /list -->
+
+                </div>
+                <!-- events list -->
+
+
+
+
+            </div></div>
+            <!-- /sidebar -->
+
+            <div class="g-clear"></div>
+
+
+
+</div>
+        <!-- /content area -->
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base_portfolio.html" %}
+{% load i18n %}
+
+                {% block path %}1{% endblock %}
+
+
+ 
+{% block main %}
+	{% for ct in categorys %}
+<!-- gallery holder -->
+                <div class="b-gallcase">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h1>{{ ct.name }}</h1></div></div>
+                    <!-- /headline -->
+
+                    <!-- gallery -->
+                    <div class="b-gall"><ul class="g-ovr">
+			{% for proj in ct.records.get_query_set %}
+                        <li>
+                                <a href="{% url "portf_one_item" proj.url %}"><img src="{{proj.main_image.image_small.url }}" alt="" /></a>
+                        </li>
+			{% endfor %}
+
+                        <li><div class="all"><a href="{% url "portf_categ" ct.name_in_uri %}">{% trans "All projects in" %} {{ ct.name }}</a></div></li>
+
+                    </ul></div>
+                    <!-- /gallery -->
+
+                </div>
+                <!-- /gallery holder -->
+	{% endfor %}
+<p>{{ gl }}<p>
+{% endblock %}
+

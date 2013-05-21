@@ -1,0 +1,119 @@
+{% extends "base_portfolio.html" %}
+{% load i18n %}
+
+                {% block path %}1{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+                $(document).ready(function(){
+
+                        // project gallery
+                        function initPrjGall(){
+                                var thumbs = $("#thumbs"),
+                                        pics = $("#pics");
+
+                                thumbs.find("a").click(function(e){
+                                        e.preventDefault();
+
+                                        var current = $(this).parent().index();
+
+                                        pics.find("li.active-pic").hide().removeClass();
+                                        pics.find( "li:eq("+current+")" ).show().addClass("active-pic");
+
+                                });
+
+                        }
+
+                        initPrjGall();
+
+                });
+
+        </script>
+{% endblock %}
+ 
+{% block main %}
+		<!-- project gallery -->
+                <div class="b-prj b-gallcase">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h1>{{ portfolio.category.name }}</h1></div></div>
+                    <!-- /headline -->
+
+                    <!-- picture case -->
+                    <div class="pics-case">
+                        <ul id="pics" class="pics">
+				{% for img in portfolio.images.get_query_set %}
+						{% if forloop.first %}
+                                                        <li class="active-pic">
+						{% else %}
+							<li>
+						{% endif %}
+                                                                <img src="{{ img.image_big.url }}" alt="" />
+
+                                                                <div class="b-glass desc"><div class="glass-data">
+                                                                        <div class="txt">
+                                                                                <p>{{ img.name }}</p>
+                                                                        </div>
+                                                                        <div class="glass"></div>
+                                                                </div></div>
+                                                        </li>
+				{% endfor%}
+                        </ul>
+                    </div>
+                    <!-- /picture case -->
+
+                    <!-- thumbs gallery -->
+                    <div id="thumbs" class="b-gall"><ul class="g-ovr">
+			{% for img in portfolio.images.get_query_set %}
+                        <li><a href="{% url "portf_one_item" portfolio.url %}"><img src="{{ img.image_small.url }}" alt="" /></a></li>
+                        {% endfor %}
+
+                    </ul></div>
+                    <!-- /thumbs gallery -->
+
+                    <div class="g-clear"></div>
+
+                </div>
+                <!-- /project gallery -->
+							
+
+		{% for categ_row in categ_down %}
+		<!-- 5 gallery colums -->
+                <div class="gallcase-5col g-ovr g-lnk-inv-case">
+		    {% for categs in categ_row%}
+                    <!-- gallery holder -->
+                    <div class="b-gallcase">
+
+                        <!-- headline -->
+                        <div class="b-headline"><div><a href="{% url "portf_categ" categs.name_in_uri %}">{{ categs.name }}</a>
+						</div>
+			</div>
+                        <!-- /headline -->
+
+                        <!-- gallery -->
+                        <div class="b-gall"><ul class="g-ovr">
+				<li>
+                            {% if categs.records.get_query_set.0 %}
+                                <a href="{% url 'portf_one_item' categs.records.get_query_set.0.get_url %}">
+                                        <img src="{{categs.records.get_query_set.0.main_image.image_small.url }}" alt="123" />
+                                </a>
+                                {% endif %}
+				</li>
+				<li>
+                            {% if categs.records.get_query_set.1 %}
+                                <a href="{% url 'portf_one_item' categs.records.get_query_set.1.get_url %}">
+                                        <img src="{{categs.records.get_query_set.1.main_image.image_small.url }}" alt="123" />
+                                </a>
+                                {% endif %}
+                                </li>
+                        </ul></div>
+                        <!-- /gallery -->
+
+                    </div>
+		<!-- /gallery holder -->
+		    {% endfor %}
+		</div>
+                <!-- /5 gallery colums -->
+		{% endfor %}
+{% endblock %}
+

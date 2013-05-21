@@ -1,0 +1,38 @@
+{% extends "abinito/base_blog.html" %}
+{% load i18n %}
+
+
+{% block main %}
+    <div class="container">
+      <div id="header">
+        <ul class="top-navigation">
+          <li>
+            <a href="{% url 'zinnia_entry_latest_feed' %}" title="{% trans "RSS Feed of latest entries" %}" class="feeds">
+              {% trans "RSS Feed" %}
+            </a>
+          </li>
+        </ul>
+        {% block breadcrumbs %}{% endblock %}
+      </div>
+      {% block slider %}{% endblock %} 
+      <div id="content" class="hfeed">
+        {% block content %}
+        <div class="links">
+          <h3>{% trans "Useful links" %}</h3>
+          <ul>
+            <li>
+              <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                {% trans "Weblog index" %}
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+                {% trans "Sitemap" %}
+              </a>
+            </li>
+          </ul>
+        </div>
+        {% endblock %}
+      </div> 
+    </div>
+{% endblock %}

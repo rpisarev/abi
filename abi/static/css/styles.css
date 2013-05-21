@@ -1,0 +1,1035 @@
+/***
+* Filename: styles.css
+* Description: Basic website styles
+* Website: www.abinito.ru
+* Author: klierik [ web: http://wwww.klierik.com | e-mail: mailto:contact@klierik.com ]
+***/
+
+
+/*
+----------------------------------------------------------------------------------------------------
+[Table of Contents]
+
+1. Base page configuration
+2. Elements of interfase, Global classes and other blocks
+3. Layouts
+   3.1 Base layout
+      3.1.1 Header                           | .l-hdr
+      3.1.2 Content Case                     | .l-cnt-case
+      3.1.3 Footer                           | .l-ftr
+
+4. Blocks
+   4.1 Elements
+      4.1.1 Ico                              | .b-ico
+      4.1.2 Social networks                  | .b-socnet
+      4.1.3 Main menu                        | .b-menu
+      4.1.4 Glass                            | .b-glass
+      4.1.5 Button                           | .b-btn
+   
+   4.2 News
+      4.2.1 Events list                      | .b-events
+      4.2.2 Partners news                    | .b-pnews
+   
+   4.3 Topics
+      4.3.1 Topic                            | .b-topic
+      4.3.2 Topics list                      | .b-topics
+   
+   4.4 Anounces
+      4.4.1 Anounce                          | .b-anounce 
+      
+   4.5 Reports
+      4.5.1 Report                           | .b-report
+      
+   4.6 Plugins
+      4.6.1 Scroll gallery                   | .b-sgall
+      4.6.2 Colorbox
+      4.6.3 blockUI
+   
+   4.7 Services
+      4.7.1 Services list                    | .b-servlist
+
+   4.8 Contacts                              | .b-contacts
+   4.9 Clients                               | .b-clients
+   4.10 Gallerys
+      4.10.1 Gallery holder                  | .b-gallcase
+      4.10.2 Gallery                         | .b-gall
+   
+   4.11 Projects
+      4.11.1 Project                         | .b-prj
+   
+   4.12 Comments
+       4.12.1 Comments list                  | .b-comm-list
+       4.12.2 Add commen form                | .b-add-comm
+
+   4.13 jQuery Plugins
+      4.13.1 UI Dialog
+      
+   4.14 Captcha                              | .b-captcha
+
+   4.15 Form elements
+      4.15.1 Input                            | .b-fi
+      4.15.3 Textarea                         | .b-fta
+
+      
+5. Universal pages constructor
+   5.1 Main Page                             | .p-mp
+----------------------------------------------------------------------------------------------------
+*/
+
+
+
+/*
+####################################################################################################
+[1. Base page configuration]
+####################################################################################################
+*/
+html { height: 100%; }
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 0.625em;   /* default page font size is 10px (1em) */
+}
+   
+   body,div,dl,dt,dd,ul,ol,li,form,table,tr,td,
+	h1,h2,h3,h4,h5,h6,pre,p,span,b,i,blockquote,
+	input,textarea, fieldset, button { margin: 0; padding: 0; /*outline: none;*/ }
+	
+	ul,ol { list-style-type: none;}
+	img, fieldset { border: none; }
+	table { border-collapse: collapse; border-spacing: 0; }
+
+	h1 { font-size: 2.4em; }
+	h2 { font-size: 1.8em; }
+	h3 { font-size: 1.4em; }
+	h4 { font-size: 1.2em; }
+	
+	input, textarea, select, label, button { font-size: 1.2em; font-family: inherit; color: #333333; }
+	input[type="checkbox"], input[type="radio"] { vertical-align: -3px; margin-right: .5em; }
+	input[type="submit"] { cursor: pointer; }
+	
+	p,a,span,b,address { font-size: 1.2em; }
+	h1, h2, h3, h4, p,span,address { color: #1a1a1a; }
+	p { line-height: 1.666em; }
+	
+	a { text-decoration: underline; color: #0065b3; }
+	a:hover { text-decoration: none; }
+	
+   button, p a, p span, p b, 
+	h1 a, h2 a, h3 a, span a,
+	h1 span, h2 span, h3 span,
+	a b, span b, label b, td b,
+	a i, span i, label i, b span, li b,
+	p label, strong, label a, a span { font-size: 1.0em; }
+	
+/*
+####################################################################################################
+[2. Elements of interfase, Global classes and other blocks]
+####################################################################################################
+*/
+   /* ===== .g- global classes ===== */
+   .g-ovr { overflow: hidden; }
+      .msie6 .g-ovr { zoom: 1; }
+   
+   .g-clear { clear: both; }
+   
+   /* link inverse underline */
+   .g-lnk-inv, .g-lnk-inv-case a { text-decoration: none; }
+   .g-lnk-inv:hover, .g-lnk-inv-case a:hover { text-decoration: underline; }
+
+      /* normal link underline */
+      .g-lnk-norm, .g-lnk-norm-case a { text-decoration: underline; }
+      .g-lnk-norm:hover, .g-lnk-norm-case a:hover { text-decoration: none; }
+      	   
+   .msie6 .g-zoom { zoom: 1; }
+
+	/* ===== colors ===== */
+	.g-col-pr { color: #72326d; }
+	.g-col-btl { color: #4c3272; }
+	.g-col-prod { color: #32724f; }
+	.g-col-media { color: #4a7232; }
+	.g-col-dev { color: #726532; }
+	.g-col-market { color: #723d32; }
+	.g-col-int { color: #921a01; }
+	
+	
+	/* ===== ===== */
+	/* ===== ===== */
+	/* ===== ===== */
+	/* ===== ===== */
+	/* ===== ===== */
+	
+	
+/*
+####################################################################################################
+[3. Layouts]
+####################################################################################################
+
+--------------------------------------------------------------------------------
+   [3.1 Base layout]
+-------------------------------------------------------------------------------- */
+
+   div.case { position: relative; z-index: 2; width: 94em; margin: 0 auto; }
+   div.
+
+   /* ===== 3.1.1 Header ===== */
+   div.l-hdr {  }
+      
+      /* path */
+      div.b-path {  }
+         div.b-path ul {  }
+            div.b-path li { display: inline; line-height: 3em; }
+               div.b-path span { margin-right: 6px; padding-right: 18px; background: url(../img/path-corner.gif) 100% 50% no-repeat; }
+                  div.b-path a {  }
+               div.b-path p { display: inline; }
+               
+               div.b-path span,
+               div.b-path p { font-size: 1.1em; }
+      
+      /* logotype nad language case */
+      div.l-hdr div.logo-case { position: relative; z-index: 1; height: 10em; }
+         div.l-hdr div.logo { position: absolute; z-index: 1; left: .5em; top: 3.1em; }
+            div.l-hdr div.logo a {
+               font-size: 1em;
+               display: block;
+               width: 276px; height: 36px;
+               background: url(../img/logo.png);
+            }
+         div.l-hdr ul.lang {
+            position: absolute; z-index: 1; top: 4.3em; right: 2em;
+         }
+   
+	/* ===== 3.1.2 Content ===== */
+	div.l-cnt { padding: 0 0 3.7em; }
+	.msie6 div.l-cnt { zoom: 1; }
+	
+	   /* main area */
+	   div.l-main { float: left; width: 72em; margin-left: 22em; }
+	   .msie6 div.l-main { display: inline; }
+	      div.main-data { padding: 1.3em 2em 0; background: #fff; }
+	      .msie6 div.main-data { zoom: 1; }
+	      
+	         /* headline */
+	         div.l-main div.b-headline { border-bottom: 1px solid #000; }
+	            div.l-main div.b-headline div { position: relative; z-index: 1; padding: 0 0 .6em; }
+	               div.l-main div.b-headline ul {  }
+	                  div.l-main div.b-headline li { display: inline; margin-right: 1em; }
+	                     
+	                     div.l-main div.b-headline span { font-size: 1.6em; }
+	                     div.l-main div.b-headline a {  }
+	                     div.l-main div.b-headline a,
+	                     div.l-main div.b-headline span { font-weight: bold; }
+	                     
+	                     div.l-main div.b-headline div.rss { position: absolute; z-index: 1; top: .4em; right: 0; }
+	                        div.l-main div.b-headline div.rss a { color: #d68300; }
+	         
+	   
+	   /* sidebar */   
+	   div.l-sb { float: left; width: 20em; margin-left: -100%; }
+	      
+	      div.sb-item { margin-top: 4.8em; }
+	      
+	      /* headline */
+	      div.l-sb div.b-headline {  }
+	         div.l-sb div.b-headline div { padding-bottom: .6em; border-bottom: 1px solid #000; }
+	            div.l-sb div.b-headline h2 { font-size: 1.8em; }
+	            div.l-sb div.b-headline h3 { font-size: 1.4em; }
+	
+	/* ===== 3.1.3 Footer ===== */
+	div.l-ftr { 
+	   position: relative; z-index: 1;
+	   width: 94em; height: 7.9em; 
+	   margin: 0 auto; 
+	   border-top: 2px solid #000; 
+	}
+	   
+	   div.l-ftr div.copyright { padding: 1.7em 0 0; }
+	      div.l-ftr div.copyright p {  }
+	      
+      div.l-ftr div.menu { position: absolute; left: 24em; top: 1.8em; }
+         div.l-ftr div.menu ul {  }
+            div.l-ftr div.menu li { display: inline; margin-right: .8em; }
+               div.l-ftr div.menu li a {  }
+               
+   /* decoration */
+   div.b-decor {
+      position: absolute; z-index: 1; left: 0; top: 0;
+      width: 100%; height: 310px;
+      background: #e2ede2 url(../img/decor-gradient.jpg) 0 0 repeat-x;
+   }
+   div.decor-mp { 
+      height: 480px;
+      background-position: 0 100%; background-color: #d0ece7;
+   }
+      div.decor-data { position: relative; z-index: 1; height: 100%; }
+      
+         div.b-decor div.path-line { 
+            position: absolute; z-index: 1; left: 0; top: 0;
+            height: 3em; width: 100%;
+            background: #bce0d9;
+         }
+         div.b-decor div.bg {
+            position: absolute; z-index: 2; left: 50%;
+            background-position: center top;
+            background-repeat: no-repeat;
+         }
+            /* portfolio */
+            div.b-decor div.pf {
+               top: 15px;
+               width: 986px; height: 295px;
+               margin-left: -398px;
+               background-image: url(../img/decor-portfolio.png); 
+            }
+            /* report */
+            div.b-decor div.rep {
+               top: 0;
+               width: 745px; height: 310px;
+               margin-left: -405px;
+               background-image: url(../img/decor-report.png);
+            }
+            /* services */
+            div.b-decor div.serv {
+               top: 4px;
+               width: 1089px; height: 306px;
+               margin-left: -554px;
+               background-image: url(../img/decor-services.png);
+            }
+            /* contacts */
+            div.b-decor div.con {
+               top: 0px;
+               width: 944px; height: 274px;
+               margin-left: -480px;
+               background-image: url(../img/decor-contacts.png);
+            }
+            /* blog */
+            div.b-decor div.blg {
+               top: 0px;
+               width: 1020px; height: 286px;
+               margin-left: -519px;
+               background-image: url(../img/decor-blog.png);
+            }
+            /*main page */
+            div.b-decor div.mp {
+               top: 0px;
+               width: 1008px; height: 480px;
+               margin-left: -492px;
+               background-image: url(../img/decor-mainpage.png);
+            }
+            
+
+/*
+####################################################################################################
+[4. Blocks]
+####################################################################################################
+--------------------------------------------------------------------------------
+   [4.1 Elements]
+-------------------------------------------------------------------------------- */
+
+   /* ===== 4.1.1 Ico ===== */
+   .b-ico { 
+      font-size: 0 !important;
+      position: absolute; z-index: 1;
+      display: block;
+      width: 16px; height: 16px;
+      background: url(../img/sprites.png) -100% -100% no-repeat;
+   }
+      .ico-clock           { width: 15px; height: 15px; background-position: 0 0; }
+      .ico-comments        { width: 15px; height: 18px; background-position: 0 -16px; }
+      .ico-comments-act    { width: 15px; height: 18px; background-position: 0 -35px; }
+      .ico-comments-hot    { width: 15px; height: 18px; background-position: 0 -54px; }
+      .ico-type            { width: 19px; height: 15px; background-position: 0 -73px; }
+      
+      .ico-point-right { width: 9px; height: 8px; background-position: 0 -189px; }
+   
+   
+   /* ===== 4.1.2 Social networks ===== */
+	div.b-socnet {  }
+	   
+	   div.b-socnet p { color: #323232; }
+	
+      div.b-socnet ul { overflow: hidden; padding-top: .3em; }
+      .msie6 div.b-socnet ul {  }
+
+         div.b-socnet li { float: left; padding: 0; border: 0;  }
+            div.b-socnet a { 
+               display: block; 
+               width: 20px; height: 20px; 
+               margin-right: 1em;
+               background: url(../img/sprites.png);
+            }
+            div.b-socnet a.tw    { background-position: 0 -89px; }
+            div.b-socnet a.fb    { background-position: 0 -110px; }
+            div.b-socnet a.mail  { background-position: 0 -131px; }
+   
+   /* ===== 4.1.3 Main menu ===== */
+   div.b-menu { border-top: 1px solid #000; }
+      div.b-menu ul { padding-top: .3em; }
+         div.b-menu li { padding: 1em 0 0; }
+            
+            div.b-menu a,
+            div.b-menu span { 
+               font-size: 1.6em; font-weight: bold;
+               text-transform: uppercase; 
+            }
+            div.b-menu a {  }
+            div.b-menu span {  }
+
+   /* ===== 4.1.4 Glass ===== */
+   .b-glass { font-size: 1em; position: absolute; }
+      .glass-data { font-size: 1em; position: relative; z-index: 2; display: block; width: 100%; height: 100%; }
+         .glass, .glass-hover {
+            position: absolute;
+            left: 0; top: 0; z-index: 1;
+            display: block;
+            width: 100%; height: 100%;
+            background: #041c22;
+            
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80); /* IE 5.5+*/
+            -moz-opacity: 0.8; /* Mozilla 1.6 è íèæå */
+            -khtml-opacity: 0.8; /* Konqueror 3.1, Safari 1.1 */
+            opacity: 0.8; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+         }
+         .glass-hover {
+            z-index: 3;
+            filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30); /* IE 5.5+*/
+            -moz-opacity: 0.3; /* Mozilla 1.6 è íèæå */
+            -khtml-opacity: 0.3; /* Konqueror 3.1, Safari 1.1 */
+            opacity: 0.3; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+         }
+         .b-glass .txt { position: relative; z-index: 2; height: 100%; color: #fff; }
+         
+      /* glass hover target */
+      a.glass-ht { overflow: hidden; }
+      a.glass-ht .glass-hover { 
+         display: none; 
+         background: #fff; cursor: pointer;
+         
+         filter:progid:DXImageTransform.Microsoft.Alpha(opacity=15); /* IE 5.5+*/
+         -moz-opacity: 0.15; /* Mozilla 1.6 è íèæå */
+         -khtml-opacity: 0.15; /* Konqueror 3.1, Safari 1.1 */
+         opacity: 0.15; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+      }
+      a.glass-ht:hover .glass-hover { display: block; }
+
+
+	/* ===== 4.1.5 Button ===== */
+	div.b-btn { overflow: hidden; }
+	  div.b-btn a,
+	  div.b-btn input {
+	     font-size: 1.4em; font-weight: bold;
+	     display: block;
+	     height: 30px; padding: 0 10px;
+	     line-height: 30px; text-decoration: none; text-align: center;
+	     background: #df9010; color: #fff;
+	     border: 0; cursor: pointer;
+	     }
+	  div.b-btn a:hover,
+	  div.b-btn input:hover { background: #e7ac4c; }
+	
+
+
+/* --------------------------------------------------------------------------------
+   [4.2 News]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.2.1 Events list ===== */
+   div.b-events {  }
+      div.b-events ul { margin-top: -1em; }
+         div.b-events li { margin-top: 2.3em; }
+            div.b-events a { line-height: 1.666em; }
+      
+      /* events page style */
+      div.events-page { padding-top: 1px; }
+         div.events-page ul { margin: -1.8em 0 0; }
+            div.events-page li.event-active { 
+               position: relative; z-index: 1; 
+               padding: 0 0 0 2em; 
+            }
+               div.events-page li.event-active p { font-weight: bold; line-height: 1.5em; }
+               div.events-page li.event-active .b-ico { left: 0; top: 5px; }
+               .msie6 div.events-page li.event-active .b-ico { left: -18px; }
+   
+   /* ===== 4.2.2 Partners news :: based on .b-ebents ===== */
+   div.b-pnews {  }
+      div.b-pnews ul { margin-top: .3em; padding-top: .2em; }
+         div.b-pnews li { margin-top: 1.1em; }
+         
+            div.b-pnews p {  }
+            div.b-pnews p.src { font-size: 1em; margin-top: 2px; }
+               div.b-pnews p.src a { color: #1f3749; margin-right: 8px; }
+            
+
+/* --------------------------------------------------------------------------------
+   [4.3 Topics]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.3.1 Topic ===== */
+   div.b-topic {  }
+   
+      /* title */
+      div.b-topic div.ttl {  }
+      .msie6 div.b-topic div.ttl { zoom: 1; }
+         div.b-topic div.ttl p { font-size: 1.8em; line-height: 1.3888em; }
+            div.b-topic div.ttl a {  }
+
+      /* status */
+      div.b-topic-status { margin-top: 1em; }
+         div.b-topic-status ul {  }
+            div.b-topic-status li { float: left; height: 1.7em; line-height: 1.7em; }
+                  
+               div.b-topic-status .b-ico { left: 10px; top: 0; }
+               div.b-topic-status span .b-ico { left: 0; }
+               
+               div.b-topic-status span,
+               div.b-topic-status a { font-size: 1.1em; position: relative; }
+                  
+               div.b-topic-status span { padding: 0 14px 0 18px; color: #808080; }
+               div.b-topic-status a { padding: 0 14px 0 32px; }
+      
+      /* picture */
+      div.b-topic div.pic { position: relative; z-index: 1; margin-top: 1.6em; }
+      
+         div.b-topic div.pic div.img { float: left; }
+            div.b-topic div.pic img { display: block; }
+            
+         div.b-topic div.pic div.author {
+            position: absolute; z-index: 1; left: 46em; top: .9em;
+            width: 19em;
+         }
+            div.b-topic div.pic div.author p { color: #808080; line-height: 1.25em; }
+         
+         div.b-topic div.pic div.b-socnet {
+            position: absolute; z-index: 1; left: 46em; bottom: 1em;
+         }
+      
+      /* description */
+      div.b-topic div.desc { margin-top: 1.7em; }
+         div.b-topic div.desc p { font-size: 1.4em; line-height: 1.425em; margin: 1.428em 0; }
+         div.b-topic div.desc blockquote { position: relative; z-index: 1; padding: 0 12em 0 4em; }
+            div.b-topic div.desc blockquote p { 
+               font-size: 1.4em; font-style: italic;
+               margin: 0;
+               color: #4c4c4c;
+            }
+            
+            div.b-topic div.desc blockquote i { width: 16px; height: 17px; }
+            div.b-topic div.desc blockquote i.s { left: 0; top: 5px; background-position: 0 -153px; }
+            div.b-topic div.desc blockquote i.e { right: 120px; bottom: 5px; background-position: 0 -171px; }
+   
+   /* ===== 4.3.2 Topics list ===== */
+   div.b-topics { overflow: hidden; margin-top: 1em; zoom: 1; }
+      div.b-topics ul.topics { margin-top: -1px; }
+         div.b-topics li.topics-item { 
+            margin-right: 8em; padding: 3em 0em 1.5em 0;
+            border-top: 1px solid #000;
+         }
+
+
+
+/* --------------------------------------------------------------------------------
+   [4.4 Anounces]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.4.1 Anounce :: based on .b-topic ===== */
+   div.b-anounce { margin-top: 4.7em; }
+   
+      div.b-anounce div.pic { margin-top: 2.3em; }
+      
+      div.b-anounce div.desc { margin-top: 5.7em; }
+
+   /* ===== ===== */
+   
+/* --------------------------------------------------------------------------------
+   [4.5 Reports]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.5.1 Report ===== */
+   div.b-report {  }
+   
+      div.b-report div.pic {  }
+         
+         div.b-report div.pic div.img { float: none; }
+      
+         div.b-report div.pic div.author { position: static; margin-top: 1em; }
+      
+         div.b-report div.pic div.b-socnet {  }
+         
+      div.b-report div.desc { margin-top: 2.1em; }
+
+   /* ===== ===== */
+
+/* --------------------------------------------------------------------------------
+   [4.6 Plugins]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.6.1 Scroll gallery ===== */
+   div.b-sgall { position: relative; height: 290px; }
+   
+      /* Invisible left/right hotspot */
+      div.scrollingHotSpotLeft { display: none; }
+      div.scrollingHotSpotLeft,
+      div.scrollingHotSpotRight {
+	      position: absolute; z-index: 200; left: 0;
+	      width: 6em; height: 100%;
+      }
+      div.scrollingHotSpotRight { left: auto; right: 0; }
+
+         div.scrollingHotSpotLeft div,
+         div.scrollingHotSpotRight div {
+            width: 100%; height: 100%;
+            background: #fff;
+               
+            opacity: 0.80; /* Standard CSS3 opacity setting */
+            -moz-opacity: 0.80; /* Opacity for really old versions of Mozilla Firefox (0.9 or older) */
+            filter: alpha(opacity = 80); /* Opacity for Internet Explorer. */
+            zoom: 1; /* Trigger "hasLayout" in Internet Explorer 6 or older versions */
+         }
+            
+         div.scrollingHotSpotLeft .b-ico,
+         div.scrollingHotSpotRight .b-ico {
+            top: 35px; left: 20px;
+            width: 20px; height: 30px;
+            background: url(../img/sprites.png);
+         }
+         div.scrollingHotSpotLeft .b-ico { background-position: 0 -198px; }
+         div.scrollingHotSpotRight .b-ico { background-position: 0 -229px; }
+      
+         div.scrollingHotSpotLeftVisible,
+         div.scrollingHotSpotRightVisible {display: block; }
+         
+
+
+      /* The scroll wrapper is always the same width and height as the containing element (div).
+         Overflow is hidden because you don't want to show all of the scrollable area.
+      */
+      div.scrollWrapper {
+	      position: relative;
+	      overflow: hidden;
+	      width: 100%;
+	      height: 100%;
+      }
+
+      div.scrollableArea {
+	      position: relative;
+	      width: auto;
+	      height: 100%;
+      }
+         div.scrollableArea * { float: left; margin-right: 2em; }
+
+   /* ===== 4.6.2 Colorbox ===== */
+
+   #colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+   #cboxOverlay{position:fixed; width:100%; height:100%;}
+   #cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+   #cboxContent{position:relative; overflow:hidden;}
+   #cboxLoadedContent{overflow:auto;}
+   #cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+   #cboxTitle{margin:0;}
+   #cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+   #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+   /* 
+       Example user style
+       The following rules are ordered and tabbed in a way that represents the
+       order/nesting of the generated HTML, so that the structure easier to understand.
+   */
+   #cboxOverlay{background:url(../img/colorbox/overlay.png) 0 0 repeat;}
+   #colorbox{}
+       #cboxTopLeft{width:21px; height:21px; background:url(../img/colorbox/controls.png) -100px 0 no-repeat;}
+       #cboxTopRight{width:21px; height:21px; background:url(../img/colorbox/controls.png) -129px 0 no-repeat;}
+       #cboxBottomLeft{width:21px; height:21px; background:url(../img/colorbox/controls.png) -100px -29px no-repeat;}
+       #cboxBottomRight{width:21px; height:21px; background:url(../img/colorbox/controls.png) -129px -29px no-repeat;}
+       #cboxMiddleLeft{width:21px; background:url(../img/colorbox/controls.png) left top repeat-y;}
+       #cboxMiddleRight{width:21px; background:url(../img/colorbox/controls.png) right top repeat-y;}
+       #cboxTopCenter{height:21px; background:url(../img/colorbox/border.png) 0 0 repeat-x;}
+       #cboxBottomCenter{height:21px; background:url(../img/colorbox/border.png) 0 -29px repeat-x;}
+       #cboxContent{background:#fff;}
+           #cboxLoadedContent{margin-bottom:28px;}
+           #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+           #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+           #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+           #cboxPrevious{position:absolute; bottom:0; left:0px; background:url(../img/colorbox/controls.png) -75px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+           #cboxPrevious.hover{background-position:-75px -25px;}
+           #cboxNext{position:absolute; bottom:0; left:27px; background:url(../img/colorbox/controls.png) -50px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+           #cboxNext.hover{background-position:-50px -25px;}
+           #cboxLoadingOverlay{background:url(images/loading_background.png) center center no-repeat;}
+           #cboxLoadingGraphic{background:url(images/loading.gif) center center no-repeat;}
+           #cboxClose{position:absolute; bottom:0; right:0; background:url(../img/colorbox/controls.png) -25px 0px no-repeat; width:25px; height:25px; text-indent:-9999px;}
+           #cboxClose.hover{background-position:-25px -25px;}
+
+      /*
+         The following fixes png-transparency for IE6.  
+         It is also necessary for png-transparency in IE7 & IE8 to avoid 'black halos' with the fade transition
+    
+         Since this method does not support CSS background-positioning, it is incompatible with CSS sprites.
+         Colorbox preloads navigation hover classes to account for this.
+    
+         !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
+         while regular CSS background images are relative to the CSS document.
+      */
+      .cboxIE #cboxTopLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderTopLeft.png, sizingMethod='scale');}
+      .cboxIE #cboxTopCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderTopCenter.png, sizingMethod='scale');}
+      .cboxIE #cboxTopRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderTopRight.png, sizingMethod='scale');}
+      .cboxIE #cboxBottomLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderBottomLeft.png, sizingMethod='scale');}
+      .cboxIE #cboxBottomCenter{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderBottomCenter.png, sizingMethod='scale');}
+      .cboxIE #cboxBottomRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderBottomRight.png, sizingMethod='scale');}
+      .cboxIE #cboxMiddleLeft{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderMiddleLeft.png, sizingMethod='scale');}
+      .cboxIE #cboxMiddleRight{background:transparent; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=img/colorbox/internet_explorer/borderMiddleRight.png, sizingMethod='scale');}
+
+
+	/* ===== 4.6.3 blockUI ===== */
+	.blockUI {  }
+	.blockOverlay {
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+		-moz-opacity: 0.6;
+		-khtml-opacity: 0.6;
+		opacity: 0.6;
+		}
+
+
+/* --------------------------------------------------------------------------------
+   [4.7 Services]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.7.1 Services list ===== */
+   div.b-servlist {  }
+      div.servlist-data {  }
+         div.b-servlist table { width: 100%; }
+         div.b-servlist td { vertical-align: top; }
+         div.b-servlist td.l {  }
+         div.b-servlist td.r { padding-left: 2em; }
+         
+            div.b-servlist div.list { width: 33em; }
+               
+               /* headline */
+               div.b-servlist div.list div.b-headline {  }
+                  div.b-servlist div.list div.b-headline div { padding-bottom: .4em; }
+                     div.b-servlist div.list div.b-headline span { font-size: 1.8em; }
+                     
+               /* list */
+               div.b-servlist div.list ul { margin-top: 1.5em; padding-bottom: 2.8em; }
+                  div.b-servlist div.list li { padding: 0 0 1em; }
+                     
+                     div.b-servlist div.list li span {  }
+                     div.b-servlist div.list li a { margin-right: 10px; }
+                     div.b-servlist div.list li span,
+                     div.b-servlist div.list li a { line-height: 1.666em; }
+   
+   /* ===== ===== */
+
+/* --------------------------------------------------------------------------------
+   [4.8 Contacts]
+-------------------------------------------------------------------------------- */
+   div.b-contacts {  }
+   
+      div.b-contacts div.left { float: left; }
+         
+         div.b-contacts div.left div.b-headline { margin-top: 2em; }
+            div.b-contacts div.left div.b-headline span { font-size: 1.8em; }
+         
+      div.b-contacts div.right { float: right; width: 20em; }
+      
+         div.b-contacts h1 { font-size: 1.8em; }
+         
+         /* address */
+         div.b-contacts table.addr { margin-top: 1.4em; }
+            div.b-contacts table.addr td { padding-right: 4px; vertical-align: top; }
+         /* map */
+         div.b-contacts div.map { margin-top: .4em; }
+         /* staff list */
+         div.b-contacts div.staff {  }
+            div.b-contacts div.staff dl {  }
+               div.b-contacts div.staff dt { margin-top: 1.5em; }
+                  div.b-contacts div.staff dt p { font-weight: bold; }
+               div.b-contacts div.staff dd { padding-bottom: .5em; }
+         
+
+/* --------------------------------------------------------------------------------
+   [4.9 Clients]
+-------------------------------------------------------------------------------- */
+
+   div.b-clients {  }
+      
+      div.b-clients div.headline {  }
+      
+      div.b-clients ul {  }
+         div.b-clients li { margin: .7em 0 0 -.2em; padding-bottom: .2em; }
+   
+   /* ===== ===== */
+
+/* --------------------------------------------------------------------------------
+   [4.10 Gallerys]
+-------------------------------------------------------------------------------- */
+
+   /* ===== 4.10.1 Gallery holder ===== */
+   div.b-gallcase {  }
+   .msie6 div.b-gallcase { overflow: hidden; width: 100%; }
+   div.b-gallcase.first {  }
+      
+      div.b-gallcase div.b-headline { margin-top: 2.6em; height: 2.5em; overflow: hidden; }
+         div.b-gallcase div.b-headline a { font-size: 1.8em; }
+      .msie div.b-gallcase div.b-headline { margin-top: 2em; }
+      
+      div.b-gallcase.first div.b-headline,
+      .msie div.b-gallcase.first div.b-headline { margin-top: 0; }
+      
+         div.b-gallcase div.b-headline h1,
+         div.b-gallcase div.b-headline span { font-size: 1.8em; }
+         
+      div.b-gallcase div.b-gall {  }
+      
+      /* 3 gallery colums */
+      div.gallcase-3col {  }
+         
+         div.gallcase-3col div.left,
+         div.gallcase-3col div.center,
+         div.gallcase-3col div.right { float: left }
+         
+         div.gallcase-3col div.left { width: 26em; margin-right: 2em; }
+         div.gallcase-3col div.center { width: 26em; margin-right: 2em; }
+         div.gallcase-3col div.right { width: 12em; }
+      
+      /* 5 gellery colums */
+      div.gallcase-5col {  }
+      
+         div.gallcase-5col div.b-gallcase { float: left; margin-right: 2em; }
+         .msie6 div.gallcase-5col div.b-gallcase { width: 120px; }
+      
+            div.gallcase-5col div.b-gall ul { margin: 0; }
+               div.gallcase-5col div.b-gall li { float: none; margin-right: 0; }
+                     
+   /* ===== 4.10.2 Gallery ===== */
+   div.b-gall {  }
+      div.b-gall ul { margin-right: -2em; }
+         div.b-gall ul li { 
+            position: relative;
+            float: left; 
+            margin: 2em 2em 0 0;
+         }
+         .msie6 div.b-gall ul li { zoom: 1; }
+         
+            div.b-gall ul a,
+            div.b-gall ul img { display: block; }
+            div.b-gall ul div.all { 
+              width: 120px; height: 120px; 
+            }
+               div.b-gall ul div.all a { position: absolute; right: 0; bottom: 10px; }
+            
+            
+            /* item hover style */
+            div.b-gall ul a {  }
+               div.b-gall ul a .b-glass {
+                  display: none;
+                  top: 0;
+                  width: 100%; height: 100%;
+               }
+               .msie6 div.b-gall ul a .b-glass { height: 120px; }
+               
+               div.b-gall ul a:hover .b-glass { display: block; }
+                  div.b-gall ul a .b-glass .txt { display: block; padding: 0 10px; }
+                     div.b-gall ul a .b-glass .txt .desc {  
+                        color: #fff; text-decoration: underline; line-height: 1.666em; 
+                     }
+               
+                  .msie6 div.b-gall .glass,
+                  .msie6 div.b-gall .txt { cursor: hand; }
+
+               
+      /* last projects gallery */
+      div.lastprj-gall { border-top: 1px solid #000; }               
+         div.lastprj-gall ul li { margin: 2em 1em 0 0; }
+         
+            div.lastprj-gall .glass {
+               background: #fff;
+            
+               filter:progid:DXImageTransform.Microsoft.Alpha(opacity=30); /* IE 5.5+*/
+               -moz-opacity: 0.3; /* Mozilla 1.6 è íèæå */
+               -khtml-opacity: 0.3; /* Konqueror 3.1, Safari 1.1 */
+               opacity: 0.3; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+            }
+ 
+/* --------------------------------------------------------------------------------
+   [4.11 Projects]
+-------------------------------------------------------------------------------- */
+   /* ===== 4.11.1 Project ===== */
+   div.b-prj {  }
+   
+      /* picture */
+      div.b-prj div.pics-case { float: left; width: 54em; margin-top: 2em; }
+		div.b-prj ul.pics {}
+			div.b-prj ul.pics li { position: relative; z-index: 1; display: none; width: 540px; height: 720px; }
+			div.b-prj ul.pics li.active-pic { display: block; }
+				div.b-prj ul.pics  img { display: block; }
+				div.b-prj ul.pics div.desc { left: 0 ; bottom: 0; width: 100%; }
+					div.b-prj ul.pics div.desc div.txt { padding: .7em .9em; }
+					div.b-prj ul.pics div.desc * { color: #fff; }
+      
+      /* thumbs */
+      div.b-prj div.b-gall { float: right; }
+      .msie6 div.b-prj div.b-gall { width: 120px; }
+         div.b-prj div.b-gall ul { margin: 0; }
+            div.b-prj div.b-gall li { float: none; margin-right: 0; }
+   
+
+
+/* --------------------------------------------------------------------------------
+   [4.12 Comments]
+-------------------------------------------------------------------------------- */
+	/* ===== 4.12.1 Comments list ===== */
+	div.b-comm-list { margin-top: 2.4em; border-top: 1px solid #000; }
+	.msie6 div.b-comm-list { zoom: 1; }
+		div.b-comm-list table { width: 60em; margin-top: 2.7em; }
+		
+		div.b-comm-list thead {  }
+			div.b-comm-list thead td.ttl { padding-left: 3em; padding-bottom: 1em; }
+				div.b-comm-list thead td.ttl div { position: relative; z-index: 1; }
+					div.b-comm-list thead p { font-size: 2.4em; font-weight: bold; line-height: normal; }
+					div.b-comm-list thead span {
+						font-size: 1em;
+						position: absolute; z-index: 1; top: .7em; right: -1.5em;
+						}
+						div.b-comm-list thead span b { font-size: 1.8em; margin-right: 3px; vertical-align: -2px; }
+						div.b-comm-list thead span a { font-size: 1.2em; font-weight: bold; }
+		
+		div.b-comm-list tfoot {  }
+			div.b-comm-list tfoot td.more { padding-left: 3em; padding-top: 2.1em;  }
+				div.b-comm-list tfoot td.more a { font-size: 1.4em; }
+		
+		div.b-comm-list tbody {  }
+			div.b-comm-list tbody td { padding-top: 1.9em; padding-bottom: 2.0em; border-bottom: 1px solid #c2c2c2; }
+				div.b-comm-list tbody p { font-size: 1.4em; line-height: 1.428em; }
+			
+			div.b-comm-list td.n { width: 12em; padding-right: 1em; text-align: right; vertical-align: top; }
+				div.b-comm-list td.n p { font-weight: bold; }
+				div.b-comm-list td.n i { font-size: 1.1em; font-style: normal; line-height: 1.918em; color: #7f7f7f; }
+			
+			div.b-comm-list td.msg { padding-left: 3em; }
+	
+	
+	/* ===== 4.12.2 Add comment form  ===== */
+	div.b-add-comm { display: none; }
+		div.b-add-comm div.dialogOptions { width: 64em; }
+		
+			table.add-comm { width: 100%; }
+				
+				table.add-comm td.ttl { padding-bottom: .8em; }
+					table.add-comm td.ttl p { font-size: 2.4em; font-weight: bold; }
+				
+				table.add-comm td.n { width: 14em; padding-top: .4em; padding-right: 2em; vertical-align: top; text-align: right; }
+					table.add-comm td.n label { font-size: 1.4em; }
+				table.add-comm td.msg { padding: 0 0 2em; }
+					table.add-comm td.msg textarea { height: 178px; }
+					table.add-comm td.msg div.b-fi { width: 36em; }
+				table.add-comm td.captcha { padding-bottom: 2em; }
+				table.add-comm td.add-comm-btn {  }
+   
+
+/* --------------------------------------------------------------------------------
+   [4.13 jQuery Plugins]
+-------------------------------------------------------------------------------- */
+
+	/* ===== 4.13.1 UI Dialog  ===== */
+	div.ui-dialog { position: absolute; overflow: hidden; background: #fff; }
+   
+      div.ui-dialog-titlebar {  }
+         div.ui-dialog-titlebar .ui-dialog-title { display: none; }
+         div.ui-dialog-titlebar .ui-dialog-titlebar-close {
+            position: absolute; z-index: 100; top: 20px; right: 20px;
+            width: 11px; height: 11px;
+            background: url(../img/sprites.png) 0px -259px no-repeat;
+         }
+            div.ui-dialog-titlebar .ui-dialog-titlebar-close span { display: none; }
+   
+      /* ===== dialog data ===== */
+      div.ui-dialog-data { padding: .9em 2em 2em; }
+      
+         div.ui-dialog-headline {  }
+            div.ui-dialog-headline p { font-size: 1.8em; color: #000; }
+         
+         div.ui-dialog-txt {  }
+
+/* --------------------------------------------------------------------------------
+   [4.14 Captcha]
+-------------------------------------------------------------------------------- */
+	table.b-captcha {  }
+		table.b-captcha td { vertical-align: top; }
+		td.captcha-img {  }
+			td.captcha-img img { display: block; }
+		td.captcha-field { padding-left: 1em; }
+			td.captcha-field div.b-fi { width: 11.5em; }
+				td.captcha-field div.b-fi div { height: 38px; }
+					td.captcha-field div.b-fi input { font-size: 3.6em; height: 36px; line-height: 36px; }
+		td.captcha-err { padding-left: 2em; }
+			td.captcha-err p { font-size: 1.4em; color: #c00; }
+
+
+/* --------------------------------------------------------------------------------
+   [4.15 Form elements]
+-------------------------------------------------------------------------------- */
+
+   /* ===== 4.15.1 Input ===== */
+   div.b-fi { position: relative; }
+      div.b-fi div { background: #fff; border: 1px solid #858585; }
+         div.b-fi input { 
+            font-size: 1.2em;
+            display: block;
+            width: 100%; padding: 1px 0 0;
+            line-height: 18px; height: 17px;
+            border: 0; background: #fff;
+            }
+   
+   /* ===== 4.15.2 Textarea ===== */
+   div.b-fta {  }
+      div.b-fta div { padding: 0 0 0 .3em; background: #fff; border: 1px solid #858585; }
+         div.b-fta textarea {
+            font-size: 1.2em;
+            display: block;
+            width: 100%; padding: 1px 0 0;
+            border: 0; background: transparent; 
+            }
+            
+
+/* --------------------------------------------------------------------------------
+   [5. Universal pages constructor]
+-------------------------------------------------------------------------------- */
+   /* ===== 5.1 Main Page ===== */
+   div.p-mp { width: 92em; }
+   
+      div.p-mp div.l-main { width: 60em; margin-left: 32em; }
+         div.p-mp div.main-data { padding: 0; background: transparent; }
+      
+      div.l-left,
+      div.l-right { width: 46em; float: left; margin-top: 2.9em; }
+      div.l-right { width: 44em; float: right; }
+      
+      div.p-mp div.mp-news { width: 46em; height: 17em; margin-top: 5.6em; border-top: 1px solid #000; }
+         div.p-mp div.mp-news div.b-headline {  }
+         div.p-mp div.mp-news div.b-headline div { padding-top: 1em; }
+            div.p-mp div.mp-news div.b-headline span { font-size: 1.8em; font-weight: bold; }
+         
+         div.p-mp div.b-events ul { padding-top: 1.3em; } 
+            div.p-mp div.b-events li { margin-top: 1em; }
+            
+      
+      div.p-mp .mp-about-us {  }
+         div.p-mp .mp-about-us p { font-size: 1.8em; line-height:  }
+      
+      div.p-mp .mp-addr { margin-top: 6.7em; }
+      
+      div.p-mp div.mp-events {  }
+         div.p-mp div.mp-events li { margin-top: 2em; }
+         div.p-mp div.mp-events li.last { margin-top: 1em; padding-bottom: 1.8em; border-bottom: 1px solid #000; }
+            div.p-mp div.mp-events li.last img { float: right; margin-left: 1em; }
+            div.p-mp div.mp-events li.last a { font-size: 1.4em; line-height: 1.428em; }
+            div.p-mp div.mp-events li.last p { margin-top: 1em; }
+   
+   /* ===== ===== */
+   
+   
+/* --------------------------------------------------------------------------------
+   []
+-------------------------------------------------------------------------------- */
+
+   /* ===== ===== */
+   /* ===== ===== */
+
+
+
+
+
+
+
+
+

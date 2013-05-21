@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %} Blog  {% endblock %}
+{% block header %} 
+<!-- header -->
+        <div class="l-hdr">
+
+            <!-- path -->
+            <div class="b-path g-lnk-inv-case"><ul>
+
+                <li><span><a href="{% url 'index_main' %}">Главная</a></span></li>
+                {% block path %}{% endblock %}
+
+            </ul></div>
+            <!-- /path -->
+
+            <!-- logotype and language case -->
+            <div class="logo-case">
+
+                <div class="logo"><a class="png" href="{% url 'index_main' %}" title="abinito"></a></div>
+
+                <ul class="lang">
+                        <li><a href="/en/blog/">English</a></li>
+                </ul>
+
+            </div>
+            <!-- /logotype and language case -->
+
+        </div>
+        <!-- /header -->
+{% endblock %}
+{% block contentb %}
+<!-- content area -->
+        <div class="l-cnt">
+
+            <!-- main area -->
+            <div class="l-main"><div class="main-data">
+<!--{% block main %}{% endblock %} -->
+
+</div></div>
+            <!-- /main area -->
+<!-- sidebar -->
+            <div class="l-sb"><div class="sb-data">
+
+                <!-- main menu -->
+                <div class="b-menu g-lnk-inv-case"><ul>
+			<li><a href="/ru/services/">УСЛУГИ</a></li>
+			
+			
+			
+				<li><a href="/ru/portfolio/">ПОРТФОЛИО</a></li>
+			
+			
+			
+				<li><span>БЛОГ</span></li>
+			
+			
+			
+				<li><a href="/ru/event/">СОБЫТИЯ</a></li>
+			
+			
+			
+				<li><a href="/ru/contacts/">КОНТАКТЫ</a></li>
+                </ul></div>
+                <!-- /main menu -->
+
+                <!-- events list -->
+                <div class="b-events sb-item">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h2>События</h2></div></div>
+
+                    <!-- list -->
+                    <ul>
+                        {% for rec in lasts %}
+                        	<li><a href="{% url 'event_anon' rec.id %}"><p>{{ rec.title_side }}</p></a></li>
+                        {% endfor %}
+                    </ul>
+                    <!-- /list -->
+
+                </div>
+                <!-- events list -->
+
+                                <!-- our clients -->
+                <div class="b-clients sb-item">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h2>Новости партнеров</h2></div></div>
+
+                    <!-- list -->
+                    <ul>
+                       <li>
+                        	<p><a href="#">Сьогодні іудеї відзначають рік</a></p>
+                            <p class="src"><a href="#">Газета ДЕНЬ</a> 8.08.2010, 12:54</p>
+                        </li>
+                        
+                        <li>
+                        	<p><a href="#">Сьогодні відзначається Міжнародний день краси</a></p>
+                            <p class="src"><a href="#">Корреспондент.net</a> 8.08.2010, 12:54</p>
+                        </li>
+                        
+                        <li>
+                        	<p><a href="#">Лісові пожежі тривають: у Казахстані загинули 5 людей, горить ...</a></p>
+                            <p class="src"><a href="#">Newsru.ua</a> 8.08.2010, 12:54</p>
+                        </li>
+                        
+                        <li>
+                        	<p><a href="#">Кіровоградщина: дикі оси покусали 9 учнів</a></p>
+                            <p class="src"><a href="#">УНIАН</a> 8.08.2010, 12:54</p>
+                        </li>
+                        
+                        <li>
+                        	<p><a href="#">В Індії автобус впав у річку: загинули 30 осіб</a></p>
+                            <p class="src"><a href="#">ЛІГА.Новини</a> 8.08.2010, 12:54</p>
+                        </li>
+                    </ul>
+                        <!-- /list -->
+
+                </div>
+                <!-- /our clients -->
+
+            </div></div>
+            <!-- /sidebar -->
+
+            <div class="g-clear"></div>
+
+
+
+</div>
+        <!-- /content area -->
+{% endblock %}
+{% block decor %}
+<div class="b-decor"><div class="decor-data">
+
+        <div class="path-line"></div>
+        <div class="bg blg png"></div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-09 14:00+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: abi/templates/base_event.html:13 abi/templates/base_portfolio.html:13
+msgid "Main"
+msgstr "Главная"
+
+#: abi/templates/base_portfolio.html:5
+msgid " Portfolio "
+msgstr "Портфолио"
+
+#: abi/templates/base_portfolio.html:44
+msgid "Last projects"
+msgstr "Последние проекты"
+
+#: abi/templates/base_portfolio.html:90 abi/templates/main_page.html:142
+msgid "Events"
+msgstr "События"
+
+#: abi/templates/base_portfolio.html:107
+msgid "Our clients"
+msgstr "Наши клиенты"
+
+#: abi/templates/event_anounce.html:14 abi/templates/event_report.html:37
+msgid "Anonce"
+msgstr "Анонс"
+
+#: abi/templates/event_anounce.html:15 abi/templates/event_report.html:38
+msgid "Photoreport"
+msgstr "Фотоотчет"
+
+#: abi/templates/event_anounce.html:18
+msgid "Subcript"
+msgstr "Подписаться на новости"
+
+#: abi/templates/event_anounce.html:37 abi/templates/event_report.html:80
+msgid "Share:"
+msgstr "ПОделиться:"
+
+#: abi/templates/event_report.html:41
+msgid "Subsript"
+msgstr "Подписаться на новости"
+
+#: abi/templates/index_portfolio.html:25
+msgid "All projects in"
+msgstr "Все проекты в"
+
+#: abi/templates/main_page.html:94
+msgid "News"
+msgstr "Новости"
+
+#: abi/templates/main_page.html:114
+msgid "here"
+msgstr "здесь"
+
+#: abi/templates/main_page.html:124
+msgid "Schema"
+msgstr "Схема проезда"

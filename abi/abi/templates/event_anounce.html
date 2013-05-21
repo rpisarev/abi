@@ -1,0 +1,56 @@
+{% extends "base_event.html" %}
+{% load i18n %}
+{% block main %}
+        <!-- content area -->
+        <div class="l-cnt">
+        	
+            <!-- main area -->
+            <div class="l-main"><div class="main-data">
+            	
+                <!-- headline -->
+                <div class="b-headline g-lnk-inv-case g-zoom"><div>
+                	
+                    <ul>
+                    	<li><span>{% trans "Anonce" %}</span></li>
+                        <li><a href="{% url 'event_anon' photo%}">{% trans "Photoreport" %}</a></li>
+                    </ul>
+                    
+                    <div class="rss"><a href="#">{% trans "Subcript" %}</a></div>
+                    
+                </div></div>
+                <!-- /headline -->
+
+                <!-- anounce -->
+                <div class="b-topic b-anounce">
+                    
+                    <!-- title -->
+                    <div class="ttl"><h1>{{ event.title }}</h1></div>
+                    <!-- /title -->
+                    
+                    <!-- picture -->
+                    <div class="pic g-ovr">
+			<div class="img"><a href="{{ event.main_image.image.url }}"><img src="{{ event.main_image.image.url }}" alt="" /></a></div>
+                        
+                        <div class="author"><p>{{ event.descript }}</p></div>
+                        
+                        <div class="b-socnet">
+                            <p>{% trans "Share:" %}</p>
+                            <ul>
+                                <li><a class="tw" href="#"></a></li>
+                                <li><a class="fb" href="#"></a></li>
+                                <li><a class="mail" href="#"></a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="g-clear"></div>
+                        
+                    </div>
+                    <!-- /picture -->
+                    
+                    <!-- description -->
+                    {{ event.body|safe }}
+                    <!-- /description -->
+                    
+                </div>
+                <!-- /anounce -->
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+
+{% block title %}  "Events"   {% endblock %}
+{% block header %} 
+<!-- header -->
+        <div class="l-hdr">
+
+            <!-- path -->
+            <div class="b-path g-lnk-inv-case"><ul>
+
+                <li><span><a href="{% url 'index_main' %}">{% trans "Main" %}</a></span></li>
+                {% block path %}{% endblock %}
+
+            </ul></div>
+            <!-- /path -->
+
+            <!-- logotype and language case -->
+            <div class="logo-case">
+
+                <div class="logo"><a class="png" href="{% url 'index_main' %}" title="abinito"></a></div>
+
+                <ul class="lang">
+                        <li><a href="{{ lang.0 }}">{{ lang.1 }}</a></li>
+                </ul>
+
+            </div>
+            <!-- /logotype and language case -->
+
+        </div>
+        <!-- /header -->
+{% endblock %}
+{% block content %}
+{% block main %}{% endblock %}
+
+</div></div>
+            <!-- /main area -->
+<!-- sidebar -->
+            <div class="l-sb"><div class="sb-data">
+
+                <!-- main menu -->
+                <div class="b-menu g-lnk-inv-case"><ul>
+			{% for mmi in mainmenu %}
+			{% ifequal mmi.url backgr.url %}
+				<li><span>{{ mmi.text }}</span></li>
+			{% else %}
+				<li><a href="/{{ lang.2 }}/{{ mmi.url }}">{{ mmi.text }}</a></li>
+			{% endifequal %}
+			{% endfor %}
+                </ul></div>
+                <!-- /main menu -->
+
+                <!-- events list -->
+                <div class="b-events events-page sb-item">
+
+
+                    <!-- list -->
+                    <ul> 
+			{% for rec in lasts %}
+				{% ifequal rec.pk  event.pk %}
+					<li class="event-active"><p>{{ rec.title_side }}</p><i class="b-ico ico-point-right"></i>
+</li>
+				{% else %}
+					<li><a href="{% url 'event_anon' rec.id %}"><p>{{ rec.title_side }}</p></a></li>
+				{% endifequal %}
+			{% endfor %}
+
+                    </ul>
+                    <!-- /list -->
+
+                </div>
+                <!-- events list -->
+
+            </div></div>
+            <!-- /sidebar -->
+
+            <div class="g-clear"></div>
+
+
+
+</div>
+        <!-- /content area -->
+{% endblock %}

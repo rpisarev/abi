@@ -1,0 +1,35 @@
+/***
+* Filename: styles.ie.css
+* Description: Personal styles for Internet Explorer browser
+* Website: www.abinito.ru
+* Author: klierik [ web: http://wwww.klierik.com | e-mail: mailto:contact@klierik.com ]
+***/
+
+/* --------------------------------------------------------------------------------
+   [All Internet Explorer version styles]
+-------------------------------------------------------------------------------- */
+html { font-size: 101%; }
+
+/* ===== inline-block emulation ===== */
+tag { zoom: 1; }
+
+/* --------------------------------------------------------------------------------
+   [6-7 Internet Explorer version styles]
+-------------------------------------------------------------------------------- */
+/* ===== inline-block emulation ===== */
+tag { *display: inline; }
+
+
+/* --------------------------------------------------------------------------------
+   [6 Internet Explorer version styles]
+-------------------------------------------------------------------------------- */
+tag { zoom:1; }
+
+tag { _position: relative; }
+
+tag { _cursor: hand; }
+
+* html tag {  }
+
+/* ===== inline-block emulation ===== */
+tag { _overflow:hidden; }

@@ -1,0 +1,73 @@
+{% extends "base_portfolio.html" %}
+{% load i18n %}
+
+                {% block path %}1{% endblock %}
+
+
+ 
+{% block main %}
+		<!-- gallery holder -->
+                <div class="b-gallcase">
+
+                    <!-- headline -->
+                    <div class="b-headline"><div><h1>{{ categ }}</h1></div></div>
+                    <!-- /headline -->
+
+                    <!-- gallery -->
+                    <div class="b-gall"><ul class="g-ovr">
+			{% for proj in categ.records.get_query_set %}
+				{% if forloop.first %}
+				{% endif %}
+                        <li>
+				{% if forloop.first %}
+				<a href="../../{{proj.url }}/"><img src="{{ proj.main_image.image_medium.url}}" alt="" /></a>	
+				{% else %}
+                            <a href="../../{{proj.url }}/"><img src="{{ proj.main_image.image_small.url}}" alt="" /></a>
+				{% endif %}
+                        </li>
+			{% endfor %}
+		    </ul></div>
+                    <!-- /gallery -->
+
+                </div>
+                <!-- /gallery holder -->
+		{% for categ_row in categ_down %}
+		<!-- 5 gallery colums -->
+                <div class="gallcase-5col g-ovr g-lnk-inv-case">
+		    {% for categs in categ_row%}
+                    <!-- gallery holder -->
+                    <div class="b-gallcase">
+
+                        <!-- headline -->
+                        <div class="b-headline"><div><a href="{% url "portf_categ" categs.name_in_uri %}">{{ categs.name }}</a>
+						</div>
+			</div>
+                        <!-- /headline -->
+
+                        <!-- gallery -->
+                        <div class="b-gall"><ul class="g-ovr">
+                                <li>
+                            {% if categs.records.get_query_set.0 %}
+                                <a href="{% url 'portf_one_item' categs.records.get_query_set.0.get_url %}">
+                                        <img src="{{categs.records.get_query_set.0.main_image.image_small.url }}" alt="123" />
+                                </a>
+                                {% endif %}
+                                </li>
+                                <li>
+                            {% if categs.records.get_query_set.1 %}
+                                <a href="{% url 'portf_one_item' categs.records.get_query_set.1.get_url %}">
+                                        <img src="{{categs.records.get_query_set.1.main_image.image_small.url }}" alt="123" />
+                                </a>
+                                {% endif %}
+                                </li>
+                        </ul></div>
+                        <!-- /gallery -->
+
+                    </div>
+		<!-- /gallery holder -->
+		    {% endfor %}
+		</div>
+                <!-- /5 gallery colums -->
+		{% endfor %}
+{% endblock %}
+
