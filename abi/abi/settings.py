@@ -1,13 +1,24 @@
 """Settings for Zinnia Blog"""
 import os
+from os.path import abspath, basename, dirname, join, normpath
+from sys import path
 
 gettext = lambda s: s
 
 DEBUG = True
 
+DJANGO_ROOT = dirname(abspath(__file__))
+
+SITE_ROOT = dirname(DJANGO_ROOT)
+SITE_NAME = basename(DJANGO_ROOT)
+path.append(DJANGO_ROOT)
+
+
+
+
 DATABASES = {'default':
              {'ENGINE': 'django.db.backends.sqlite3',
-              'NAME': os.path.join(os.path.dirname(__file__), 'abi.db')}
+              'NAME': normpath(join(SITE_ROOT, 'abi.db'))}
              }
 
 TIME_ZONE = 'Europe/Kiev'
@@ -15,8 +26,10 @@ TIME_ZONE = 'Europe/Kiev'
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = 'static'
-
+MEDIA_ROOT = ''
+STATICFILES_DIRS = (
+    normpath(join(SITE_ROOT, 'static')),
+)
 SECRET_KEY = 'jo-1rzm(%sf)3#n+fb7h955yu$3(pt63abhi12_t7e^^5q8dyw'
 
 USE_TZ = True
@@ -33,7 +46,7 @@ LANGUAGES = (
 )
 
 LOCALE_PATHS = (
-    os.path.join(os.path.dirname(__file__), 'locale'),
+    os.path.join(dirname(__file__), 'locale'),
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,7 +61,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'abi.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
+    os.path.join(dirname(__file__), 'templates').replace('\\','/'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

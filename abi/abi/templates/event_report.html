@@ -1,13 +1,15 @@
 {% extends "base_event.html" %}
 {% load i18n %}
+{% load staticfiles %}
 
 {% block scripts %}
-<script src="/media/js/jquery/jquery.js" type="text/javascript"></script>
-    <script src="/media/js/jquery/jquery.ui.widget.js" type="text/javascript"></script>
-    <script src="/media/js/jquery/jquery.browser.min.js" type="text/javascript"></script>
+
+<script src="{% static "js/jquery/jquery.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/jquery/jquery.ui.widget.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/jquery/jquery.browser.min.js" %}" type="text/javascript"></script>
     
-    <script src="/media/js/jquery/jquery.smoothDivScroll-1.1.js" type="text/javascript"></script>
-    <script src="/media/js/jquery/jquery.colorbox.js" type="text/javascript"></script>
+    <script src="{% static "js/jquery/jquery.smoothDivScroll-1.1.js" %}" type="text/javascript"></script>
+    <script src="{% static "js/jquery/jquery.colorbox.js" %}" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			
