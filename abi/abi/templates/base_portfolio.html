@@ -51,7 +51,7 @@
                     {% for lastpost in lastposts%}
                         <li>
                             <a href="{% url "portf_one_item" lastpost.url %}">
-                                <img src="{{ lastpost.main_image.image_small.url }}" alt="{{ lastpost.main_image.image_small.url }}" />
+                                <img src="{{ lastpost.main_image.image_small.url }}" alt="" />
 
                                 <span class="b-glass"><span class="glass-data">
                                 	<span class="txt"><span class="desc">{{ lastpost.title }}</span></span>

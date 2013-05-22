@@ -26,7 +26,7 @@ TIME_ZONE = 'Europe/Kiev'
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = ''
+MEDIA_ROOT = normpath(join(SITE_ROOT, 'media'))
 STATICFILES_DIRS = (
     normpath(join(SITE_ROOT, 'static')),
 )
